@@ -7,9 +7,8 @@ import timestamp from '../../../../cron/data/timestamp.json';
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime' // import plugin
 import * as settings from '../../../../settings'
-import ColoradoFlag from '../../../../images/Flag_of_Colorado.svg';
+import PGHFlag from '../../../../images/PGH_Flag.png';
 dayjs.extend(relativeTime)
-
 
 const setCount = (player: Player) => {
   return player.rankedNetplayProfile.wins +
@@ -56,18 +55,20 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center h-screen p-8">
-      <img className="h-48" src={ColoradoFlag} alt="colorado flag" />
+      <img className="h-48" src={PGHFlag} alt="colorado flag" />
       <h1 className="text-3xl m-4 text-center text-white">
         {settings.title}
       </h1>
       <div className="p-1 text-gray-300"> Updated {updateDesc}</div>
       <Table players={players} />
-      <div className="p-4 text-gray-300 flex flex-col">
+      <div className="p-4 text-gray-300 flex flex-col text-center">
+        <div>
+          <a className="text-gray-400 hover:text-indigo-700 hover:underline" href="https://github.com/JadaTBK/PGHSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-gray-400 hover:text-indigo-700 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
         <div>Built by blorppppp</div>
         <div>
           <a href="https://www.buymeacoffee.com/blorppppp" target="_blank" rel="noreferrer"
              className="text-gray-400 hover:text-indigo-700 mr-2 hover:underline">
-            Buy me a coffee
+            Buy blorppppp a coffee
           </a>☕
         </div>
       </div>
