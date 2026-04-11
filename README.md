@@ -4,4 +4,4 @@ This is a fork of [CoSlippiLeaderboard](https://github.com/Grantismo/CoSlippiLea
 
 Buy [blorppppp a coffee](https://www.buymeacoffee.com/blorppppp) as thanks.
 
-You can access the deployed site [here}(https://jadatbk.github.io/PGHSlippiLeaderboard/).
+You can access the deployed site [here](https://jadatbk.github.io/PGHSlippiLeaderboard/).
