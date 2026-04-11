@@ -10,6 +10,7 @@ import * as settings from '../../../../settings'
 import PGHFlag from '../../../../images/PGH_Flag.png';
 dayjs.extend(relativeTime)
 
+
 const setCount = (player: Player) => {
   return player.rankedNetplayProfile.wins +
     player.rankedNetplayProfile.losses;
@@ -27,8 +28,6 @@ const sortAndPopulatePlayers = (players: Player[]) => {
 }
 
 export default function HomePage() {
-  console.log(playersNew);
-  console.log(playersOld);
 
   const rankedPlayersOld = sortAndPopulatePlayers(playersOld)
   const oldPlayersMap = new Map(
@@ -55,19 +54,22 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center h-screen p-8">
-      <img className="h-48" src={PGHFlag} alt="colorado flag" />
+      <img className="h-48" src={PGHFlag} alt="Pittsburgh flag" />
       <h1 className="text-3xl m-4 text-center text-white">
         {settings.title}
       </h1>
-      <div className="p-1 text-gray-300"> Updated {updateDesc}</div>
+
+      <div className='text-moal-yellow hover:text-yellow-50 hover:underline'><a href="https://forms.gle/PNLiJ4kmHrvpVwmw9" target='_blank'>Register your connect code</a></div>
+
+      <div className="p-1 text-white"> Updated {updateDesc}</div>
       <Table players={players} />
       <div className="p-4 text-gray-300 flex flex-col text-center">
         <div>
-          <a className="text-gray-400 hover:text-indigo-700 hover:underline" href="https://github.com/JadaTBK/PGHSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-gray-400 hover:text-indigo-700 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
+          <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href="https://github.com/JadaTBK/PGHSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
         <div>Built by blorppppp</div>
         <div>
           <a href="https://www.buymeacoffee.com/blorppppp" target="_blank" rel="noreferrer"
-             className="text-gray-400 hover:text-indigo-700 mr-2 hover:underline">
+             className="text-moal-yellow hover:text-yellow-50  mr-2 hover:underline">
             Buy blorppppp a coffee
           </a>☕
         </div>
