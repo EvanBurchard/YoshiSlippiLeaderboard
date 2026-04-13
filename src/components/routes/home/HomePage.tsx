@@ -68,7 +68,6 @@ export default function HomePage() {
       <div className="p-4 text-gray-300 flex flex-col text-center">
         <div>
           <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href="https://github.com/JadaTBK/PGHSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
-        <div>Built by blorppppp</div>
         <div>
           <a href="https://www.buymeacoffee.com/blorppppp" target="_blank" rel="noreferrer"
              className="text-moal-yellow hover:text-yellow-50  mr-2 hover:underline">
