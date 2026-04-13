@@ -17,7 +17,7 @@ const getPlayerConnectCodes = async (): Promise<string[]> => {
   await doc.loadInfo(); // loads document properties and worksheets
   const sheet = doc.sheetsByIndex[0];
   const rows = (await sheet.getRows()); // remove header row
-  return [...new Set(rows.map((r) => r._rawData[1]).filter(r => r !== ''))] as string[]
+  return [...new Set(rows.map((r) => r._rawData[1]).filter(r => r !== '').map(c => c.trim().toUpperCase()))] as string[]
 };
 
 const getPlayers = async () => {

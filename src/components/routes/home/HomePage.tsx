@@ -8,6 +8,8 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime' // import plugin
 import * as settings from '../../../../settings'
 import PGHFlag from '../../../../images/PGH_Flag.png';
+import PGHBanner from '../../../../images/PGH-Banner.png';
+
 dayjs.extend(relativeTime)
 
 
@@ -54,7 +56,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center h-screen p-8">
-      <img className="h-48" src={PGHFlag} alt="Pittsburgh flag" />
+      <img className="h-48" src={PGHBanner} alt="Pittsburgh Melee" />
       <h1 className="text-3xl m-4 text-center text-white">
         {settings.title}
       </h1>
