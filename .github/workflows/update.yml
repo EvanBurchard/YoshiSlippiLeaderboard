@@ -11,6 +11,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Fetch existing player data
+      run: |
+        git fetch origin artifacts || true
+        git checkout origin/artifacts -- players-old.json timestamp.json || true
+        mkdir -p cron/data
+        cp players-old.json cron/data/players-old.json || true
+        cp timestamp.json cron/data/timestamp.json || true
+
     - name: Set up Git
       run: |
         git --version
