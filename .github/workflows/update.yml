@@ -53,6 +53,6 @@ jobs:
         git rm -rf .
         cp cron/data/players-new.json players-old.json
         cp cron/data/timestamp.json timestamp.json
-        git add players-old.json
+        git add players-old.json timestamp.json
         git commit -m "Update player data"
         git push -f origin HEAD:artifacts
