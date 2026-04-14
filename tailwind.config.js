@@ -4,8 +4,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        74	131	31
-73
         'yoshi-green': '#398123',
         'yoshi-red': '#b00033',
         'yoshi-blue': '#1a2a5f ',
