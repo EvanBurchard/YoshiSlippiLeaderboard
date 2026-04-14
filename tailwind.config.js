@@ -4,12 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'moal-green': '#2bb673',
-        'moal-yellow': '#ffb81c',
-        'moal-light-blue-1': '#25aae1',
-        'moal-light-blue-2': '#9aceef',
-        'moal-dark-blue-1': '#00002e',
-        'moal-dark-blue-2': '#001e54'
+        74	131	31
+73
+        'yoshi-green': '#398123',
+        'yoshi-red': '#b00033',
+        'yoshi-blue': '#1a2a5f ',
+        'yoshi-yellow': '#e1e54B',
+        'yoshi-pink': '#f08B8F ',
+        'yoshi-cyan': '#65d3dc'
       }
     },
   },

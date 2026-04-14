@@ -91,10 +91,10 @@ module.exports = {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>${settings.title}</title>
-            <meta property="og:title" content="PGH Ranked Slippi Leaderboard">
-            <meta property="og:site_name" content="PGH Ranked Slippi Leaderboard">
-            <meta property="og:url" content="https://jadatbk.github.io/PGHSlippiLeaderboard/#/">
-            <meta property="og:description" content="A small website showing a Slippi ranked leaderboard for Pittsburgh players.">
+            <meta property="og:title" content="Yoshi Ranked Slippi Leaderboard">
+            <meta property="og:site_name" content="Yoshi Ranked Slippi Leaderboard">
+            <meta property="og:url" content="https://evanburchard.github.io/YoshiSlippiLeaderboard/#/">
+            <meta property="og:description" content="A small website showing a Slippi ranked leaderboard for Yoshi players.">
           </head>
           <body class="bg-gray-600">
             <noscript>

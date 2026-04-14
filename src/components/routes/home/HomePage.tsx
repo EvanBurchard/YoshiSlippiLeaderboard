@@ -7,8 +7,7 @@ import timestamp from '../../../../cron/data/timestamp.json';
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime' // import plugin
 import * as settings from '../../../../settings'
-import PGHFlag from '../../../../images/PGH_Flag.png';
-import PGHBanner from '../../../../images/PGH-Banner.png';
+import YoshiAnnounce from '../../../../images/Yoshi_announce.png';
 
 dayjs.extend(relativeTime)
 
@@ -56,21 +55,21 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center h-screen p-8">
-      <img className="h-48" src={PGHBanner} alt="Pittsburgh Melee" />
+      <img className="h-48" src={YoshiAnnounce} alt="Yoshi Melee" />
       <h1 className="text-3xl m-4 text-center text-white">
         {settings.title}
       </h1>
 
-      <div className='text-moal-yellow hover:text-yellow-50 hover:underline'><a href="https://forms.gle/PNLiJ4kmHrvpVwmw9" target='_blank'>Register your connect code</a></div>
+      <div className='text-yoshi-yellow hover:text-yellow-50 hover:underline'><a href="https://forms.gle/Wf7EUw4a33cPXfQr9" target='_blank'>Register your connect code</a></div>
 
       <div className="p-1 text-white"> Updated {updateDesc}</div>
       <Table players={players} />
       <div className="p-4 text-gray-300 flex flex-col text-center">
         <div>
-          <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href="https://github.com/JadaTBK/PGHSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-moal-yellow hover:text-yellow-50 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
+          <a className="text-yoshi-yellow hover:text-yellow-50 hover:underline" href="https://github.com/evanburchard/YoshiSlippiLeaderboard" target='_blank'>Fork</a> of the <a className="text-yoshi-yellow hover:text-yellow-50 hover:underline" href='https://github.com/Grantismo/CoSlippiLeaderboard' target='_blank'>Colorado Ranked Slippi Leaderboard by blorppppp</a> </div>
         <div>
           <a href="https://www.buymeacoffee.com/blorppppp" target="_blank" rel="noreferrer"
-             className="text-moal-yellow hover:text-yellow-50  mr-2 hover:underline">
+             className="text-yoshi-yellow hover:text-yellow-50  mr-2 hover:underline">
             Buy blorppppp a coffee
           </a>☕
         </div>
