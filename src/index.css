@@ -17,3 +17,12 @@ body::before {
     opacity: 0.1;
     z-index: -1;
 }
+
+:root {
+  --text-color: #ffffff;
+  --link-color: #e1e54B;
+}
+
+.dynamic-text { color: var(--text-color); }
+.dynamic-link { color: var(--link-color); }
+.dynamic-link:hover { opacity: 0.8; text-decoration: underline; }
