@@ -94,9 +94,6 @@ export function Row({ player }: Props) {
           <div className="md:text-sm text-xs text-gray-400">{ratio}</div>
         </>}
 
-
-      </>}
-
       </td>
     </tr>
   );
