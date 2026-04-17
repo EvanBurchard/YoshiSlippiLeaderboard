@@ -46,13 +46,20 @@ export function Row({ player }: Props) {
     }
     return Math.floor(player.rankedNetplayProfile.ratingOrdinal - player.oldRankedNetplayProfile.ratingOrdinal);
   }
-
+  const getWinLossRatio = (wins: number, losses: number) => {
+    const total = wins + losses;
+    if (total === 0) return '-';
+    return Math.round((wins / total) * 100) + '%';
+  }
   const playerRank = getRank(player);
   const isActive = playerRank.name !== 'None';
   const totalSets = player.rankedNetplayProfile.wins + player.rankedNetplayProfile.losses;
   const totalGames = (player.rankedNetplayProfile.characters || []).reduce((acc, val)=> acc + val.gameCount, 0);
   const rankChange = getRankChange(player);
   const ratingChange = getRatingChange(player);
+  const wins = player.rankedNetplayProfile.wins ?? 0;
+  const losses = player.rankedNetplayProfile.losses ?? 0;
+  const ratio = getWinLossRatio(wins, losses);
 
   return (
     <tr className={`${playerRank.bgClass} border-separate border-spacing-2 border-b-2 border-gray-600`} >
@@ -80,9 +87,16 @@ export function Row({ player }: Props) {
         <Characters player={player} totalGames={totalGames} />
       </td>
       <td className="md:text-xl text-gray-300 text-sm md:px-6 md:py-4 md:p-1 whitespace-nowrap">
-        {Boolean(totalGames) && <><span className="text-green-500">{player.rankedNetplayProfile.wins ?? 0}</span><span className="md:p-1">/</span>
-        <span className="text-red-500">{player.rankedNetplayProfile.losses ?? 0}</span>
+        {Boolean(totalGames) && <>
+          <span className="text-green-500">{wins}</span>
+          <span className="md:p-1">/</span>
+          <span className="text-red-500">{losses}</span>
+          <div className="md:text-sm text-xs text-gray-400">{ratio}</div>
+        </>}
+
+
       </>}
+
       </td>
     </tr>
   );
