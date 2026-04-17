@@ -91,9 +91,8 @@ export function Row({ player }: Props) {
           <span className="text-green-500">{wins}</span>
           <span className="md:p-1">/</span>
           <span className="text-red-500">{losses}</span>
-          <div className="md:text-sm text-xs text-gray-400">{ratio}</div>
+          <div className="md:text-sm text-xs text-gray-400">winrate: {ratio}</div>
         </>}
-
       </td>
     </tr>
   );
